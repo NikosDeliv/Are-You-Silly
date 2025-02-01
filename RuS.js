@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const random = () => Math.random();
 
     const moveButtonRandomly = (button) => {
-        const parentWidth = 300; // Assuming the width of the parent
-        const parentHeight = 200; // Assuming the height of the parent
+        const parentWidth = 400; // Assuming the width of the parent
+        const parentHeight = 300; // Assuming the height of the parent
         const x = random() * (parentWidth - 100); // Assuming button width is 100
         const y = random() * (parentHeight - 50); // Assuming button height is 50
 
