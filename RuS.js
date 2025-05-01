@@ -2,14 +2,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const naiButton = document.getElementById('naiButton');
     const oxiButton = document.getElementById('oxiButton');
     const imageContainer = document.getElementById('imageContainer');
+    const bgMusic = document.getElementById('bgMusic');
 
     const random = () => Math.random();
 
     const moveButtonRandomly = (button) => {
-        const parentWidth = 400; // Assuming the width of the parent
-        const parentHeight = 300; // Assuming the height of the parent
-        const x = random() * (parentWidth - 100); // Assuming button width is 100
-        const y = random() * (parentHeight - 50); // Assuming button height is 50
+        const parentWidth = 400; // Adjust to your container's actual size if needed
+        const parentHeight = 300;
+        const x = random() * (parentWidth - 100); // button width approx
+        const y = random() * (parentHeight - 50);  // button height approx
 
         button.style.left = `${x}px`;
         button.style.top = `${y}px`;
@@ -17,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     naiButton.addEventListener('click', () => {
         imageContainer.style.display = 'block';
+        bgMusic.play(); // <--- Trigger audio here
     });
 
     oxiButton.addEventListener('mouseover', () => {
